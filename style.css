@@ -10,7 +10,7 @@ body, html {
 	text-shadow: 1px 1px #000000;
 	height: 100%;
 	margin: 0px;
-	font-kerning: normal;
+	font-kerning: none;
 }
 
 .content {
