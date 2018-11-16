@@ -1,0 +1,78 @@
+/* Stlesheet for McNibbler.com */
+body, html {
+	font-family: "Raleway";
+	font-size: 1.2em;
+	letter-spacing: 3px;
+	font-weight: normal;
+	text-align: justify;
+	text-shadow: 1px 1px #000000;
+	height: 100%;
+	margin: 0px;
+}
+
+.content {
+	background-image: linear-gradient(to bottom right, #005266, #000d33);
+	padding: 20px;
+}
+
+h1, h2, h3 {
+	font-weight: lighter;
+	letter-spacing: 20px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+p {
+	color: #d0d0d0;
+}
+
+a {
+	color: #ff80ff;
+}
+
+.header span.border {
+	background-color: #101010;
+	color: white;
+	padding: 1em;
+	font-size: 2em;
+	letter-spacing: 20px;
+	opacity: 0.9;
+	text-align: center;
+}
+
+/* Generates the paralax header background */
+.paralax1 {
+	position: relative;
+	opacity: 0.95;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.paralax1 {
+	background-image: url('headerBgEdit2.PNG');
+	height: 70%;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: black;
+}
