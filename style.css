@@ -1,4 +1,6 @@
 /* Stlesheet for McNibbler.com */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
 body, html {
 	font-family: "Raleway";
 	font-size: 1.2em;
