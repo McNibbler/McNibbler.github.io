@@ -97,6 +97,7 @@ a {
 #particles-js {
 	position: fixed;
 	top: 0;
+	bottom: 0;
 	width: 100%;
 	background-image: linear-gradient(to bottom right, #003d4d, #001433);
 	z-index: -1;
