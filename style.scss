@@ -1,0 +1,38 @@
+/* Particle animations (Compiled from SCSS) */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+@for $i from 1 through 30 {
+
+    @keyframes particle-animation-#{$i} {
+        100% {
+            transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+        }
+    }
+    
+    .particle:nth-child(#{$i}){
+        animation: particle-animation-#{$i} 120s infinite;
+        $size: random(15) + 10 + px;
+        
+        height: $size;
+        width: $size;
+
+        /* Delay between spawns */
+        animation-delay: random(100) * .1s;
+
+        /* Sets the particle to a random opacity between around 0.30 and 0.70 */
+        opacity: (random(40) + 30) / 100;
+
+        /* Translation only showing in the viewport width */
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+        
+        /* Random blue-ish particle colors */
+        background: hsl(random(100) + 185, 70%, 50%);
+    }
+}
+
+
+

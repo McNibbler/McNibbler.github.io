@@ -55,6 +55,43 @@ p {
 
 a {
 	color: #ff80ff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #4d79ff;
+	text-decoration: none;
+}
+
+.menu ul {
+
+	list-style-type: none;
+	margin: 0px;
+	width: 100%;
+	color: #00ffcc;
+	background-color: black;
+	height: 1.5em;
+	position: fixed;
+	overflow: auto;
+	z-index: 2;
+	opacity: 0.75;
+
+}
+
+.menu li{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	text-align: center;
+	display: inline; 
+}
+.menu li: last-child{
+	border-right: unset;
+	display: inline; 
+}
+.menu li a:hover {
+	color: magenta;
+	background-color: #101010;
+	text-decoration: none;
 }
 
 .header span.border {
