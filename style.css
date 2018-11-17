@@ -21,6 +21,7 @@ body, html {
 	background-image: linear-gradient(to bottom right, #003d4d, #001433);
 	text-shadow: 1px 1px 2px black, 0 0 5px white;
 	padding: 40px;
+	overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -95,5 +96,6 @@ a {
   	position: absolute;
   	width: 100%;
   	height: 100%;
+  	z-index: 0;
 	background: $background
 }
