@@ -4,7 +4,7 @@
 
 body, html {
 	font-family: "Raleway";
-	font-size: 1.2em;
+	font-size: 1.3em;
 	letter-spacing: 3px;
 	font-weight: normal;
 	text-align: justify;
@@ -13,7 +13,7 @@ body, html {
 	text-shadow: 1px 1px 2px black;
 	word-wrap: break-word;
 	margin: auto;
-	line-height: 1.5em;
+	line-height: 1.6em;
 	font-kerning: auto;
 }
 
@@ -70,34 +70,38 @@ a:hover {
 	width: 100%;
 	color: #00ffcc;
 	background-color: black;
-	height: 1.5em;
+	height: 2em;
 	position: fixed;
 	overflow: auto;
 	z-index: 2;
 	opacity: 0.75;
-
+	margin: auto;
+	padding-top: 0.2em;
+	
 }
 
 .menu li{
-	padding-left: 0.5em;
+	margin: auto;
 	padding-right: 0.5em;
 	text-align: center;
-	display: inline; 
+	display: inline;
 }
-.menu li: last-child{
-	border-right: unset;
-	display: inline; 
+
+.menu li a {
+	font-size: 1.4em;
 }
+
 .menu li a:hover {
 	color: magenta;
 	background-color: #101010;
 	text-decoration: none;
 }
 
+
 .header span.border {
 	background-color: #101010;
 	color: white;
-	padding: 1em;
+	padding: 0.75em;
 	font-size: 2em;
 	padding-top: : 3em;
 	letter-spacing: 20px;
@@ -109,7 +113,7 @@ a:hover {
 /* Generates the paralax header background */
 .parallax1 {
 	position: relative;
-	opacity: 0.95;
+	opacity: 0.90;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -119,7 +123,7 @@ a:hover {
 
 .parallax1 {
 	background-image: url("headerBgEdit2.PNG");
-	height: 70%;
+	height: 60%;
 }
 
 .header {
@@ -130,6 +134,7 @@ a:hover {
 	text-align: center;
 	color: black;
 	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
 }
 
 #particles-js {
