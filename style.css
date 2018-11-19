@@ -70,25 +70,34 @@ a:hover {
 	width: 100%;
 	color: #00ffcc;
 	background-color: black;
-	height: 2em;
+	height: 2.2em;
 	position: fixed;
 	overflow: auto;
 	z-index: 2;
 	opacity: 0.75;
-	margin: auto;
 	padding-top: 0.2em;
 	
 }
 
 .menu li{
 	margin: auto;
-	padding-right: 0.5em;
+	padding-left: 0.5em;
 	text-align: center;
 	display: inline;
+	border-right: 1px solid #FFFFFF;
+}
+
+.menu li:last-child {
+	padding-right: 0.5em;
+	border-right: none;
+}
+
+.menu li:first-child {
+	padding-left: 0;
 }
 
 .menu li a {
-	font-size: 1.4em;
+	font-size: 1.3em;
 }
 
 .menu li a:hover {
@@ -125,6 +134,8 @@ a:hover {
 	background-color: #101010;
 	color: white;
 	padding: 0.75em;
+	/* For some reason there's extra space to the right */
+	padding-right: 0.5em;
 	font-size: 2em;
 	padding-top: : 3em;
 	letter-spacing: 20px;
