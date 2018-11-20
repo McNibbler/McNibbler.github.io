@@ -72,8 +72,8 @@ praticlesJS("particle-conatiner",
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "bubble"
+        "enable": true,
+        "mode": "grab"
       },
       "onclick": {
         "enable": false,
@@ -83,9 +83,9 @@ praticlesJS("particle-conatiner",
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 200,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.4
         }
       },
       "bubble": {
