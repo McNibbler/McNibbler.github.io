@@ -145,7 +145,7 @@ a:hover {
 }
 
 /* Generates the paralax header background */
-.parallax1 {
+.parallax1, .parallaxProjects {
 	position: relative;
 	opacity: 0.90;
 	background-attachment: fixed;
@@ -157,6 +157,11 @@ a:hover {
 
 .parallax1 {
 	background-image: url("headerBgEdit2.PNG");
+	height: 60%;
+}
+
+.parallaxProjects {
+	background-image: url("headerBgProjects.PNG");
 	height: 60%;
 }
 
