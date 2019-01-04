@@ -178,17 +178,18 @@ a:hover {
 
 /* Responsive images */
 div.gallery {
-	border: 1px solid #cccccc;
+	border: 1px solid #660080;
 	width: 60%;
 	margin: auto;
 	background-image: linear-gradient(to bottom right, #3b135e, #1e0633);
-  	background-color: #3b135e;
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   	max-width: 500px;
 }
 
 div.gallery:hover {
-	border: 1px solid #777777;
+	border: 1px solid #a300cc;
+	background-image: linear-gradient(to bottom right, #42146b, #270c3f);
+	box-shadow: 0 0 20px 20px rgba(130, 28, 150, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 div.gallery img {
