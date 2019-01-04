@@ -176,6 +176,65 @@ a:hover {
 	font-size: 1em;
 }
 
+/* Responsive images */
+div.gallery {
+	border: 1px solid #cccccc;
+	width: 60%;
+	margin: auto;
+	background-image: linear-gradient(to bottom right, #3b135e, #1e0633);
+  	background-color: #3b135e;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	max-width: 500px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777777;
+}
+
+div.gallery img {
+  	width: 100%;
+  	height: auto;
+}
+
+div.description {
+  	padding: 6px;
+  	text-align: center;
+ 	font-family: "Open Sans", sans-serif;
+ 	color: #d0d0d0;
+	font-size: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+	padding: 0 15px;
+	float: center;
+	width: 25%;
+}
+
+@media only screen and (max-width: 800px) {
+	.responsive {
+		width: 50%;
+		margin: 15px 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.responsive {
+		width: 100%;
+	}
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Particles library */
 #particles-js {
 	position: fixed;
 	top: -20%;
