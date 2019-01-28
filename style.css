@@ -145,7 +145,7 @@ a:hover {
 }
 
 /* Generates the paralax header background */
-.parallax1, .parallaxProjects {
+.parallax1, .parallaxProjects, .parallax404 {
 	position: relative;
 	opacity: 0.90;
 	background-attachment: fixed;
@@ -154,6 +154,10 @@ a:hover {
 	background-size: cover;
 }
 
+.parallax404 {
+	background-image: url("crabrave.gif");
+	height: 60%;
+}
 
 .parallax1 {
 	background-image: url("headerBgEdit2.PNG");
@@ -165,6 +169,7 @@ a:hover {
 	height: 60%;
 }
 
+
 .header {
 	position: absolute;
 	left: 0;
@@ -174,6 +179,11 @@ a:hover {
 	color: black;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1em;
+}
+
+video {
+	display: block;
+	margin: 0 auto;
 }
 
 /* Responsive images */
@@ -211,18 +221,18 @@ div.description {
 
 .responsive {
 	padding: 0 15px;
-	float: center;
+	float: left;
 	width: 25%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
 	.responsive {
 		width: 50%;
 		margin: 15px 0;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 	.responsive {
 		width: 100%;
 	}
