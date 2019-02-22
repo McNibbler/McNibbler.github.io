@@ -26,7 +26,7 @@
 
 
 	<body>
-		<div class="parallaxProjects">
+		<div class="parallaxIC">
 			<div class="header">
 				<span class="border">IC Controller</span>
 			</div>
@@ -38,11 +38,26 @@
 
 				<h3>Multi-Programmable IC Controller</h3>
 
-				<p>UNDER CONSTRUCTION</p>
-
 				<p>As one of my last projects during my time at XCerra Corp, one of the boards I was designing at the time had a few powerful but very complicated chips on board that all needed to cooperate for us to finish the prototype we were working on at the time. As this board was a small proof-of-concept to be shown to a customer, we needed some sort of compact system of communicating to all on-board chips and program them accordingly while still keeping the system modular and compact.</p>
 
-				<p></p>	
+				<p>Initially, the program started off as an experiment to see if I was able to interface to arguably the simplest IC on our board, an AD5732 Dual-output precision DAC. To accomplish this, I had to familiarize myself with implementing communication protocols on my own for the first time, in this case learning the functionality of SPI. Additionally, I had to learn how to program a device to behave how I wanted it to through addressing and writing data to individual registers of the DAC, with all the additional complications of investigating the spec sheet to figure out the power-on sequence, the intialization and loading registers process, etc. For this first stage, the program was relatively simple, with just a simple C++ program running on an Arduino controlling just this one IC.</p>
+
+				<p>Once I was able to accomplish communication to one IC, the project changed scope massively, moving to a GUI based solution that would interface to the Arduino itself through serial communication over USB. With this system, we wanted to be able to expand it so that I could control multiple significantly more complicated Integrated Circuits all under the same software package. Specifically, I needed to add functionality to communicate with an AD9910 DDS and an LT2977 PMIC - although we wanted to have the system work in a way that was expandable to more ICs if needed. These ICs are much more complicated and require extensive and thorough reading of their respective lengthy spec sheets to understand their register maps and other functionalities.</p>
+
+				<p></p>
+
+				<a target="_blank" href="https://github.com/McNibbler/Multi-Programmable-IC-Controller">
+					<div class="gallery">
+						<img src="projects_resources/IC/program.PNG" alt="IC Controller">
+						<div class="description">Controller GUI</div>
+					</div>
+				</a>
+
+				<p>To accomplish this task, I needed a way to create commands that would not only tell which IC to write to, but also what kind of functions the user wished to accomplish with the IC, as well as the data needed to do so. To accomplish this, I created an expandable command system that revolved around a branching tree structure. Ultimately, a command would start with a device byte, which was a single byte to be sent through USB to identify which IC the user is trying to access (e.g. "D" for DDS, "d" for DAC, "p" for PMIC). Upon receiving this, the microcontroller side would then use a series of finite state machines to work its way down the tree to see what exactly the user wants to do (i.e. "d" for DAC followed by "w" for write, "A" for DAC address A, "2048" for the binary representation of full-scale for the DAC output). Finally, each command ends with a "!" byte, signifying that the buffer should stop filling and the command should be executed. If any invalid command is received, the command is discarded without execution. One serious complication with this was that in its final state, the actual data after the instructions is sent as a string of decimal digits as opposed to just simple binary bytes and then converted to an integer on the microcontroller side. The reason for this has to do with the fact that these bytes were being sent from a python program. As python does not deal with fixed-sized integers, we had silly complications such as recieving our data as chunks of 7-bit signed integers (thanks python), so I compromised with the slightly larger, but ultimately much safer option of just sending it as a string.</p>
+
+				<p>After creating this whole communication system, I finally had to implement it into a communication module on the python side of the program, performing all bitwise operations and command construction here and interfacing it to the simple controller module that I made for this program. I finally had a GUI program that I constructed, learning how to use Qt in the process as I give IC a respective section on the GUI. With this system finally in place, all one needs to do to add another IC is to add the respective GUI elements and implement the desired functionality described in the spec sheet through another branch in the finite state machine on the microcontroller side. While much work still has to go into each chip, as each is obviously very unique in its own right (why the PMIC functionality was never fully implemented), this system helps tremendously in making the communication between GUI and microcontroller much simpler.</p>
+
+				<p></p>
 
 
 			<div class="foot">

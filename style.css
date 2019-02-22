@@ -145,33 +145,34 @@ a:hover {
 }
 
 /* Generates the paralax header background */
-.parallax1, .parallaxProjects, .parallax404, .parallaxResume {
+.parallax1, .parallaxProjects, .parallax404, .parallaxResume, .parallaxIC {
 	position: relative;
 	opacity: 0.90;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 60%;
 }
 
 .parallax404 {
 	background-image: url("crabrave.gif");
-	height: 60%;
 }
 
 .parallax1 {
 	background-image: url("headerBgEdit2.PNG");
-	height: 60%;
 }
 
 .parallaxProjects {
 	background-image: url("headerBgProjects.PNG");
-	height: 60%;
 }
 
 .parallaxResume {
 	background-image: url("headerResume.PNG");
-	height: 60%;
+}
+
+.parallaxIC {
+	background-image: url("projects_resources/IC/program_banner.PNG");
 }
 
 
